@@ -1,0 +1,8 @@
+#Remove entries based on search
+POST /_delete_by_query
+{
+  "query" : {
+        "match" : { "xxxxx" : "xxxxx" }
+   }
+}
+
