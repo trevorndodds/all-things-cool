@@ -1,0 +1,23 @@
+shield:
+  authc:
+    realms:
+        esusers:
+            type: esusers
+            order: 0
+            files:
+               users: /app/elasticsearch-2.4.4/config/shield/users
+               users_roles: /app/elasticsearch-2.4.4/config/shield/users_roles
+    realms:
+      active_directory:
+        type: active_directory
+        order: 1
+        domain_name: xxxxxxxxx
+        url: ldap://xxxxxx:389
+        unmapped_groups_as_roles: false
+        user_search:
+             base_dn: DC=xxxx,DC=com
+             filter: (&(objectClass=user)(sAMAccountName={0}))
+        group_search:
+             base_dn: DC=xxxx,DC=com
+        files:
+             role_mapping:/app/elasticsearch-2.4.4/config/shield/role_mapping.yml
