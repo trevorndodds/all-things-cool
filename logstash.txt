@@ -1,12 +1,12 @@
  jdbc {
         jdbc_driver_library => "\path\to\sqljdbc42.jar"
-		jdbc_connection_string => "jdbc:sqlserver://xxxx:1111;DatabaseName=xxxxxx"
-        jdbc_driver_class => "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-		jdbc_user => "xxxxx"
-		jdbc_password => "xxxxx"
-		jdbc_default_timezone => "UTC"
-		schedule => "1 5 * * *"
-		add_field  => { "SQLQuery" => "Daily"}
+	jdbc_connection_string => "jdbc:sqlserver://xxxx:1111;DatabaseName=xxxxxx"
+	jdbc_driver_class => "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+	jdbc_user => "xxxxx"
+	jdbc_password => "xxxxx"
+	jdbc_default_timezone => "UTC"
+	schedule => "1 5 * * *"
+	add_field  => { "SQLQuery" => "Daily"}
         statement => "SELECT * from xxxxxx"
     }
     
